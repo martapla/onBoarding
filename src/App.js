@@ -10,19 +10,19 @@ function App() {
   const tutorialData = [
     {
       title: 'Dedica moltes hores',
-      description: 'Un minim de 30 hores a la setmana',
+      description: 'Un minim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.',
       bgColor: '#58caa4',
       image: time,
     },
     {
       title: 'Programa projectes propis',
-      description: 'Més val 10 hores treballant en projectes propis, que 10 hores mirant tutorials.',
+      description: 'Més val 10 hores treballant en projectes propis, que 10 hores mirant tutorials. La motivació i la implicació en el projecte ajudarà a accelerar el teu aprenentatge.',
       bgColor: '#cecece',
       image: programming,
     },
     {
       title: 'Procura descansar',
-      description: 'Descansar bé i desconectar és vital.Milloraràs la concentració.',
+      description: "Descansar bé i desconectar és vital. D'aquesta manera reduiràs l'estrés i l'ansietat. Milloraràs la teva concentració i consolidaràs el teu aprenentatge.",
       bgColor: '#f1bf53',
       image: meditation,
     },
@@ -36,7 +36,7 @@ function App() {
     
     setCurrentIndex((prevIndex) => (prevIndex + 1) % tutorialData.length);
   };
-  
+
 
 //  Button Prev
   const handlePrevData = () => {
@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App" >
       
-       <h1>On Boarding !!!</h1>
+       {/* <h1>On Boarding !!!</h1> */}
       
         <Card
             title={tutorialData[currentIndex].title}

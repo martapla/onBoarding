@@ -21,16 +21,22 @@ const Card = ({ title, description, image, cardStyles, handlePrevData, handleNex
   
 return (
     <>
-        <div className='card-border' style={cardStyles}>
+    <div className='card-border' style={cardStyles}>
+
+        <div className="image-container">
             <img src={image} alt="Tutorial" />
-            <p>{title}</p>
-            <p>{description}</p>
-      
-            <div className="button-wrap">
-              {buttons}
-            </div>
-      
         </div>
+      
+        <div className="text">
+            <h3 className="title">{title}</h3>
+            <p className="description"> {description}</p>
+        </div>
+      
+        <div className="button-wrap">
+          {buttons}
+        </div>
+      
+    </div>
         
 
     </>
