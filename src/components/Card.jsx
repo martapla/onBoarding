@@ -1,6 +1,7 @@
 import React from 'react'
+import Indicator from './Indicator.jsx';
 
-const Card = ({ title, description, image, cardStyles, handlePrevData, handleNextData, currentIndex, totalItems }) => {
+const Card = ({ title, description, image, cardStyles, handlePrevData, handleNextData, currentIndex, totalItems, tutorialData, handleIndicatorClick }) => {
   console.log('Current Index:', currentIndex);
   console.log('totalItems:', totalItems);
 
@@ -8,6 +9,7 @@ const Card = ({ title, description, image, cardStyles, handlePrevData, handleNex
 
   if (currentIndex === 0) {
     buttons = <button onClick={handleNextData}>⇨</button>;
+
   } else if (currentIndex > 0 && currentIndex < totalItems - 1) {
     buttons = (
       <>
@@ -15,9 +17,11 @@ const Card = ({ title, description, image, cardStyles, handlePrevData, handleNex
         <button onClick={handleNextData}>⇨</button>
       </>
     );
+    
   } else if (currentIndex === totalItems - 1) {
     buttons = <button onClick={handlePrevData}>⇦</button>;
   }
+
   
 return (
     <>
@@ -32,8 +36,21 @@ return (
             <p className="description"> {description}</p>
         </div>
       
+     
         <div className="button-wrap">
-          {buttons}
+        
+            <div className="indicator">
+              <Indicator
+                totalSteps={tutorialData.length}
+                currentStep={currentIndex + 1}
+                onClickIndicator={handleIndicatorClick}
+              />
+            </div>
+            
+            <div>
+                {buttons}
+            </div>
+          
         </div>
       
     </div>

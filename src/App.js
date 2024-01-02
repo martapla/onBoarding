@@ -1,9 +1,9 @@
 import './App.css';
-import Card from './Card';
+import Card from './components/Card.jsx';
 import React, { useState } from 'react';
-import meditation from './meditation.svg'
-import programming from './programming.svg'
-import time from './time.svg'
+import meditation from './assets/meditation.svg'
+import programming from './assets/programming.svg'
+import time from './assets/time.svg'
 
 function App() {
 
@@ -50,22 +50,28 @@ function App() {
    
   };
 
+// Indicator Position
+  const handleIndicatorClick = (step) => {
+    setCurrentIndex(step - 1); 
+  };
+
+
   return (
-    <div className="App" >
-      
-       {/* <h1>On Boarding !!!</h1> */}
+    < div className="App" >
       
         <Card
-            title={tutorialData[currentIndex].title}
-            description={tutorialData[currentIndex].description}
-            image={tutorialData[currentIndex].image}
-            cardStyles={cardStyles}
-            handlePrevData={handlePrevData}
-            handleNextData={handleNextData}
-            currentIndex={currentIndex}
-            totalItems={tutorialData.length}
-          />
-
+        title={tutorialData[currentIndex].title}
+        description={tutorialData[currentIndex].description}
+        image={tutorialData[currentIndex].image}
+        cardStyles={cardStyles}
+        handlePrevData={handlePrevData}
+        handleNextData={handleNextData}
+        currentIndex={currentIndex}
+        totalItems={tutorialData.length}
+        tutorialData={tutorialData}
+        handleIndicatorClick={handleIndicatorClick}
+      />
+      
     </div>
 
   );
