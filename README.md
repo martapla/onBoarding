@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# React- Basics: Onboarding Digital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En aquest lliurament aplicarem els conceptes bàsics que has après de React en el següent cas pràctic: la creació d'un Onboarding digital. Aquesta aplicació dispondrà de dos botons per a avançar o retrocedir a través de les frases, amb l'acompanyament d'una imatge que es modificarà.
 
-## Available Scripts
+A continuació, presentem un exemple de les 3 pantalles de l'aplicació. En el moment de la seva utilització, només es visualitzarà una pantalla a la vegada.
 
-In the project directory, you can run:
+![Exercise image](<Screenshot 2024-01-02 at 23.37.11.png>)
 
-### `npm start`
+## Nivell 1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Exercici 1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+En aquest exercici, crearem els primers components per implementar la base del projecte. Presentarem el primer pas del tutorial sense cap maquetació.
 
-### `npm test`
+Passos a seguir:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Crear un component: Card.
 
-### `npm run build`
+2. Carregar el component Card dins del component App.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. En el component App, defineix l'array tutorialData, que conté la informació de cada pas que es mostrarà a l'usuari.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Crea el primer estat mitjançant el hook useState, per portar el compte del pas en què ens trobem.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Passa mitjançant props les dades del primer pas al component Card.
 
-### `npm run eject`
+6. Utilitza a Card.js les dades proporcionades per props per mostrar a l'usuari el títol i la descripció del primer pas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Exercici 2
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Exercici 2
+Per ara, la teva aplicació pot mostrar només una frase. En aquest exercici farem que pugui mostrar totes les frases de l'onBoarding. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+En aquest exercici farem que es vagin mostrant els diferents passos a l’usuari/ària.
 
-## Learn More
+Per dur a terme aquesta funció has de seguir les següents tasques:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Implementar una funció nextStep a App.js, que vagi incrementant el valor de l'estat step en una unitat.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Passa per props al component Card, la funció nextStep i crida-la des del JSX del component Card. D'aquesta manera, quan l'usuari/ària faci clic al botó en el component Card, s'executarà la funció nextStep, que en modificar el valor de l'estat "step", 
 
-### Code Splitting
+3. Veuràs que passa el següent objecte de l'array tutorialData al component Card.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Exercici 3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Has de maquetar el component Card de forma responsive.
 
-### Making a Progressive Web App
+### Exercici 4
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Ara cal programar la funcionalitat que permet retrocedir un pas en el tutorial.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Crea la funció prevStep al component App, similar a nextStep, però que resti una unitat a l'estat step cada vegada que s'executa.
+Passa aquesta funció al component Card mitjançant props i fer-los servir en el JSX.
+Hauràs de fer ús del renderitzat condicional per mostrar i amagar els botons de retrocedir i avançar.
 
-### Deployment
+Pas 1: només es mostra el botó d'avançar.
+Pas 2: es mostren els botons d'avançar i retrocedir.
+Pas 3: es mostra el botó de retrocedir.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Exercici 5
 
-### `npm run build` fails to minify
+En aquest exercici implementarem l'indicador del pas en què ens trobem.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Per a això, segueix aquests passos:
+
+Crea el component Indicator.js i carrega'l dins del component App.
+Passa per props la quantitat de passos del tutorial (tutorialData.length) i el pas en què ens trobem (step).
+Amb les dades proporcionades per les propietats, pinta dinàmicament el número de boletes utilitzant un .map.
+Destaca la boleta on ens trobem fent servir styled components.
+
+## Nivell 2
+
+### Exercici 6
+
+ENHORABONA!, ja has creat la base del projecte, ara ens toca afegir noves funcionalitats. 
+
+Necessitem que en fer clic a cada boleta es mostri la frase corresponent.
+
+
