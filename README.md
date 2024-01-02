@@ -4,11 +4,12 @@ En aquest lliurament aplicarem els conceptes bàsics que has après de React en 
 
 A continuació, presentem un exemple de les 3 pantalles de l'aplicació. En el moment de la seva utilització, només es visualitzarà una pantalla a la vegada.
 
-![Exercise image](<Screenshot 2024-01-02 at 23.37.11.png>)
+![example image](<exercise example image.png>)
+
 
 ## Nivell 1
 
-### Exercici 1
+### - Exercici 1
 
 En aquest exercici, crearem els primers components per implementar la base del projecte. Presentarem el primer pas del tutorial sense cap maquetació.
 
@@ -27,7 +28,8 @@ Passos a seguir:
 6. Utilitza a Card.js les dades proporcionades per props per mostrar a l'usuari el títol i la descripció del primer pas.
 
 
-### Exercici 2
+
+### - Exercici 2
 
 - Exercici 2
 Per ara, la teva aplicació pot mostrar només una frase. En aquest exercici farem que pugui mostrar totes les frases de l'onBoarding. 
@@ -43,11 +45,13 @@ Per dur a terme aquesta funció has de seguir les següents tasques:
 3. Veuràs que passa el següent objecte de l'array tutorialData al component Card.
 
 
-### Exercici 3
+
+### - Exercici 3
 
 Has de maquetar el component Card de forma responsive.
 
-### Exercici 4
+
+### - Exercici 4
 
 
 Ara cal programar la funcionalitat que permet retrocedir un pas en el tutorial.
@@ -60,7 +64,8 @@ Pas 1: només es mostra el botó d'avançar.
 Pas 2: es mostren els botons d'avançar i retrocedir.
 Pas 3: es mostra el botó de retrocedir.
 
-### Exercici 5
+
+### - Exercici 5
 
 En aquest exercici implementarem l'indicador del pas en què ens trobem.
 
@@ -71,9 +76,10 @@ Passa per props la quantitat de passos del tutorial (tutorialData.length) i el p
 Amb les dades proporcionades per les propietats, pinta dinàmicament el número de boletes utilitzant un .map.
 Destaca la boleta on ens trobem fent servir styled components.
 
+
 ## Nivell 2
 
-### Exercici 6
+### - Exercici 6
 
 ENHORABONA!, ja has creat la base del projecte, ara ens toca afegir noves funcionalitats. 
 
