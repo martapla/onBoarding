@@ -1,3 +1,7 @@
+## 🌐 Live Demo
+
+https://on-board-git-main-martapla.vercel.app/
+
 # React- Basics: Onboarding Digital
 
 En aquest lliurament aplicarem els conceptes bàsics que has après de React en el següent cas pràctic: la creació d'un Onboarding digital. Aquesta aplicació dispondrà de dos botons per a avançar o retrocedir a través de les frases, amb l'acompanyament d'una imatge que es modificarà.
@@ -9,7 +13,7 @@ A continuació, presentem un exemple de les 3 pantalles de l'aplicació. En el m
 
 ## Nivell 1
 
-### - Exercici 1
+### -- Exercici 1
 
 En aquest exercici, crearem els primers components per implementar la base del projecte. Presentarem el primer pas del tutorial sense cap maquetació.
 
@@ -29,9 +33,8 @@ Passos a seguir:
 
 
 
-### - Exercici 2
+### -- Exercici 2
 
-- Exercici 2
 Per ara, la teva aplicació pot mostrar només una frase. En aquest exercici farem que pugui mostrar totes les frases de l'onBoarding. 
 
 En aquest exercici farem que es vagin mostrant els diferents passos a l’usuari/ària.
@@ -46,12 +49,12 @@ Per dur a terme aquesta funció has de seguir les següents tasques:
 
 
 
-### - Exercici 3
+### -- Exercici 3
 
 Has de maquetar el component Card de forma responsive.
 
 
-### - Exercici 4
+### -- Exercici 4
 
 
 Ara cal programar la funcionalitat que permet retrocedir un pas en el tutorial.
@@ -65,7 +68,7 @@ Pas 2: es mostren els botons d'avançar i retrocedir.
 Pas 3: es mostra el botó de retrocedir.
 
 
-### - Exercici 5
+### -- Exercici 5
 
 En aquest exercici implementarem l'indicador del pas en què ens trobem.
 
@@ -79,7 +82,7 @@ Destaca la boleta on ens trobem fent servir styled components.
 
 ## Nivell 2
 
-### - Exercici 6
+### -- Exercici 6
 
 ENHORABONA!, ja has creat la base del projecte, ara ens toca afegir noves funcionalitats. 
 
